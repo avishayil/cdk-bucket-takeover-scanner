@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "cdk-bucket-takeover-scanner"
+version = "0.0.1"
+description = "A tool that scans a list of AWS accounts for CDK S3 Bucket Takeover Risk"
+authors = ["Avishay Bar <avishay.bar@cyberark.com>"]
+readme = "README.md"
+packages = []
+
+[tool.poetry.dependencies]
+python = ">=3.8.1"
+boto3 = "*"
+
+[tool.poetry.dev-dependencies]
+black = "==24.2.0"
+isort = "==5.11.5"
+flake8 = "==7.0.0"
+yamllint = "*"
+pre-commit = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
