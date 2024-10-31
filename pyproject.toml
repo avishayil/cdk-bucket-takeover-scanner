@@ -16,6 +16,8 @@ isort = "==5.11.5"
 flake8 = "==7.0.0"
 yamllint = "*"
 pre-commit = "*"
+pytest = "*"
+moto = "*"
 
 [build-system]
 requires = ["poetry-core"]
