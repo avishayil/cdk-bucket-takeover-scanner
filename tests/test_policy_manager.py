@@ -1,7 +1,7 @@
 import boto3
 from moto import mock_aws
 
-from src.policy_manager import PolicyManager
+from cdk_bucket_takeover_scanner.policy_manager import PolicyManager
 
 
 @mock_aws

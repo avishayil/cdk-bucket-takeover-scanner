@@ -10,7 +10,7 @@ repos:
       - id: check-yaml
 
   - repo: https://github.com/pycqa/flake8
-    rev: 7.0.0
+    rev: 7.1.1
     hooks:
       - id: flake8
         additional_dependencies: [
@@ -25,18 +25,18 @@ repos:
     hooks:
       - id: seed-isort-config
 
-  - repo: https://github.com/timothycrosley/isort
-    rev: 5.11.5
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
     hooks:
       - id: isort
         pass_filenames: true
         args: ["--profile", "black"]
 
-  - repo: https://github.com/ambv/black
-    rev: 24.2.0
+  - repo: https://github.com/psf/black
+    rev: 24.10.0
     hooks:
       - id: black
-        language_version: python3.11
+        language_version: python3
 
   - repo: https://github.com/pre-commit/pygrep-hooks
     rev: v1.9.0

@@ -3,9 +3,9 @@ from typing import List, Optional
 
 import boto3
 
-from src.account_manager import AWSAccountManager
-from src.policy_manager import PolicyManager
-from src.report_writer import CSVReportWriter
+from .account_manager import AWSAccountManager
+from .policy_manager import PolicyManager
+from .report_writer import CSVReportWriter
 
 
 class CDKBucketScanner:
