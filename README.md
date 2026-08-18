@@ -21,7 +21,7 @@ For more details on the research behind this tool, please refer to Aqua Security
 
 ## Requirements
 
-- Python 3.9 or higher
+- Python 3.10 or higher
 - AWS credentials configured for cross-account role assumption.
 
 ## Installation
