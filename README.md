@@ -21,10 +21,23 @@ For more details on the research behind this tool, please refer to Aqua Security
 
 ## Requirements
 
-- Python 3.8.1 or higher
+- Python 3.10 or higher
 - AWS credentials configured for cross-account role assumption.
 
 ## Installation
+
+### Option 1: Install the CLI with pipx (recommended)
+
+The scanner is packaged as a console command. Install it in an isolated
+environment with [pipx](https://pipx.pypa.io/):
+
+```bash
+pipx install cdk-bucket-takeover-scanner
+```
+
+This exposes the `cdk-bucket-takeover-scanner` command on your `PATH`.
+
+### Option 2: Develop from source with Poetry
 
 You can install the dependencies using [Poetry](https://python-poetry.org/), a Python dependency management tool.
 
@@ -89,9 +102,17 @@ To run this script, you will need to assign the following minimal IAM policy to 
 }
 ```
 
-To run the scanner, use the following command:
+To run the scanner, use the console command (available after `pipx install` or `poetry install`):
 
 ```bash
+cdk-bucket-takeover-scanner --account-ids <ACCOUNT_ID_1> <ACCOUNT_ID_2> ... --assume-role-name <ROLE_NAME>
+```
+
+When developing from source you can also run it through Poetry:
+
+```bash
+poetry run cdk-bucket-takeover-scanner --account-ids <ACCOUNT_ID_1> <ACCOUNT_ID_2> ... --assume-role-name <ROLE_NAME>
+# or, equivalently
 poetry run python scan.py --account-ids <ACCOUNT_ID_1> <ACCOUNT_ID_2> ... --assume-role-name <ROLE_NAME>
 ```
 
@@ -102,7 +123,7 @@ poetry run python scan.py --account-ids <ACCOUNT_ID_1> <ACCOUNT_ID_2> ... --assu
 ### Example
 
 ```bash
-poetry run python scan.py --account-ids 123456789012 987654321098 --assume-role-name OrganizationAccountAccessRole --fix
+cdk-bucket-takeover-scanner --account-ids 123456789012 987654321098 --assume-role-name OrganizationAccountAccessRole --fix
 ```
 
 This example assumes the role `OrganizationAccountAccessRole` in both accounts (`123456789012` and `987654321098`), checks for mismatched IAM roles, S3 buckets, vulnerable CDK bootstrap versions, and applies a fix by creating and attaching a policy if any vulnerabilities are detected.
@@ -172,4 +193,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 
 Author: Avishay Bar
-Email: avishay.bar@cyberark.com
+Email: avishay.il@gmail.com

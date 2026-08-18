@@ -375,6 +375,10 @@ $RECYCLE.BIN/
 
 ### CDK-specific ignores ###
 *.swp
+
+# Scanner runtime output
+bucket_takeover_report.csv
+bucket_takeover.log
 cdk.context.json
 package-lock.json
 yarn.lock
