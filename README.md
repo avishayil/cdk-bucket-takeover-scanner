@@ -1,3 +1,9 @@
+<a href="https://avishay.co.il" target="_blank" rel="noopener">
+  <img src=".github/brand/hero.png" alt="Avishay Bar — Security // AI // Engineering. Secure the AI you build, and the AI you run." width="100%" />
+</a>
+
+---
+
 
 # CDK Bucket Takeover Scanner
 
